@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,8 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DockSample</RootNamespace>
     <AssemblyName>DockSample</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Logo.ico</ApplicationIcon>
@@ -158,32 +161,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WinFormsUI\ThemeVS2003.csproj">
-      <Project>{719f0f69-66da-438d-b5bb-2d883ef4ace2}</Project>
-      <Name>ThemeVS2003</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WinFormsUI\ThemeVS2005.csproj">
-      <Project>{b51ec09a-f8be-4b5a-bd07-0f4489075a00}</Project>
-      <Name>ThemeVS2005</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WinFormsUI\ThemeVS2012.csproj">
-      <Project>{4ed4fdb5-9fd0-49e6-876d-1635f727c755}</Project>
-      <Name>ThemeVS2012</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WinFormsUI\ThemeVS2013.csproj">
-      <Project>{245e07f6-10d5-4cfa-b003-0deb06b223da}</Project>
-      <Name>ThemeVS2013</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WinFormsUI\ThemeVS2015.csproj">
-      <Project>{007d4ac8-948f-4816-86ad-b9d1343672c1}</Project>
-      <Name>ThemeVS2015</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
-      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
-      <Name>WinFormsUI</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Images\ArrowDown.bmp" />
     <None Include="Images\ArrowUp.bmp" />
     <None Include="Images\Bitmap.ico" />
@@ -226,6 +203,32 @@
     <Content Include="Images\Logo.ico" />
     <Content Include="Images\SplashScreen.png" />
     <Content Include="Logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WinFormsUI\ThemeVS2003.csproj">
+      <Project>{719f0f69-66da-438d-b5bb-2d883ef4ace2}</Project>
+      <Name>ThemeVS2003</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\ThemeVS2005.csproj">
+      <Project>{b51ec09a-f8be-4b5a-bd07-0f4489075a00}</Project>
+      <Name>ThemeVS2005</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\ThemeVS2012.csproj">
+      <Project>{4ed4fdb5-9fd0-49e6-876d-1635f727c755}</Project>
+      <Name>ThemeVS2012</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\ThemeVS2013.csproj">
+      <Project>{245e07f6-10d5-4cfa-b003-0deb06b223da}</Project>
+      <Name>ThemeVS2013</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\ThemeVS2015.csproj">
+      <Project>{007d4ac8-948f-4816-86ad-b9d1343672c1}</Project>
+      <Name>ThemeVS2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{c75532c4-765b-418e-b09b-46d36b2abdb1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
